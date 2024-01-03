@@ -12,4 +12,4 @@ tag:
 	@echo "Tagging"
 	git add . && git commit -m "Release $(VERSION)"
 	git tag -a $(VERSION) -m "Release $(VERSION)" -f
-	git push --tags
+	git push --tags -f
