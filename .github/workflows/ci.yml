@@ -67,7 +67,7 @@ jobs:
       - name: Packaging chart
         run: |
           helm package charts/* --destination .cr-release-packages
-          helm index .cr-release-packages --url https://hoverhuang.github.io/helm-charts/
+          helm repo index .cr-release-packages --url https://hoverhuang.github.io/helm-charts/
       - name: Add dependency chart repos
         run: |
           helm repo add elastic https://helm.elastic.co
