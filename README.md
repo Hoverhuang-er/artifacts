@@ -1,6 +1,6 @@
 # Self-Hosted Kubernetes Helm Charts
 
-[![License](https://img.shields.io/badge/License-BSD-3-Clause-blue.svg)](https://opensource.org/license/bsd-3-clause/)
+[![License](https://img.shields.io/badge/License-BSD%203%20Clause-blue.svg)](https://opensource.org/license/bsd-3-clause)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/cdfng)](https://artifacthub.io/packages/search?repo=cdfng)
 
 The code is provided as-is with no warranties.
