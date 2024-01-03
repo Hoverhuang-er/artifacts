@@ -21,4 +21,4 @@ You can then run `helm search repo cdfng` to see the charts.
 ## License
 
 <!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
-[Apache 2.0 License](https://github.com/cdfng/helm-charts/blob/main/LICENSE).
+[BSD-3-Clause License](https://github.com/cdfng/helm-charts/blob/main/LICENSE).
