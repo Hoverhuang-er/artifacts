@@ -67,7 +67,7 @@ jobs:
           helm package charts/codeserver --destination .cr-release-packages
           helm repo index .cr-release-packages --url https://hoverhuang-er.github.io/artifacts/
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.5.0
+        uses: helm/chart-releaser-action@v1.6.1
         with:
           charts_dir: charts
           config: cr.yaml
