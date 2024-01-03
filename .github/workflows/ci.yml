@@ -65,10 +65,7 @@ jobs:
       - name: Packaging chart
         run: |
           helm package charts/codeserver --destination .cr-release-packages
-          helm repo index .cr-release-packages --url https://hoverhuang-er.github.io/artifacts/
-      - name: Add dependency chart repos
-        run: |
-          helm repo add codeserver https://hoverhuang-er.github.io/artifacts
+          helm repo index .cr-release-packages --url https://hoverhuang-er.github.io/artifacts/charts/
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         with:
