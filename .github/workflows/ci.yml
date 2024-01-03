@@ -65,7 +65,7 @@ jobs:
       - name: Packaging chart
         run: |
           helm package charts/codeserver --destination .cr-release-packages
-          helm repo index .cr-release-packages --url https://hoverhuang-er.github.io/artifacts/charts/
+          helm repo index .cr-release-packages --url https://hoverhuang-er.github.io/artifacts/
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         with:
@@ -86,23 +86,3 @@ jobs:
               echo '::warning:: helm push failed!'
             fi
           done
-  sync_readme:
-    permissions:
-      contents: write # for git push
-    needs:
-      - release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: |
-          cp -f README.md ${{ runner.temp }}/README.md
-      - uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-      - run: |
-          cp -f ${{ runner.temp }}/README.md .
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add README.md
-          git commit --signoff -m "Sync README from main"
-          git push
