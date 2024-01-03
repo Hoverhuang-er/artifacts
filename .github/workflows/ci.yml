@@ -2,8 +2,6 @@ name: CI for Release Charts
 
 on:
   push:
-    paths:
-      - 'README.md'
     branches:
       - main
     tags:
