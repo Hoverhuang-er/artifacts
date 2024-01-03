@@ -9,6 +9,6 @@ package:
 
 tag:
 	@echo "Tagging"
-	git add charts/* && git commit -m "Release $(VERSION)"
-	git tag -a $(VERSION) -m "Release $(VERSION)"
-	git push origin $(VERSION)
+	git add . && git commit -m "Release $(VERSION)"
+	git tag -a $(VERSION) -m "Release $(VERSION)" -f
+	git push --tags
