@@ -73,7 +73,6 @@ jobs:
           config: cr.yaml
         env:
           CR_TOKEN: "${{ secrets.GHTOKEN }}"
-          CR_SKIP_EXISTING: "true"
 
       - name: Push charts to GHCR
         run: |
