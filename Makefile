@@ -1,4 +1,5 @@
-VERSION := $(shell git describe --tags --always --dirty)
+#VERSION := $(shell git describe --tags --always --dirty)
+VERSION:=v0.0.1
 all: package
 
 package:
